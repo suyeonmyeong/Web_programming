@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>컬러다이얼로그로 색 입력</h3>
+    <hr />
+    <form>
+      색 선택
+      <input
+        type="color"
+        value="#00BFFF"
+        onchange="document.body.style.color=this.value"
+      />
+    </form>
+    <br />
+
+    <h3>달력 만들기</h3>
+    <hr />
+    <form>
+      <pre>
+            Month: <input type="month" value="2024-09" /><br />
+            Week: <input type="week" value="2024-W09" /><br />
+            Date: <input type="date" value="2024-09-30" /><br />
+            Time: <input type="time" value="13:52" />
+        </pre>
+    </form>
+  </body>
+</html>

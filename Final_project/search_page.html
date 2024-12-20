@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style_search.css" />
+  </head>
+  <body>
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky-navbar" id="stickyNavbar">
+      <div class="logo">
+        <a href="main.html">
+          <!-- 메인 페이지 맨 위로 이동하는 링크 -->
+          <img src="images/logo_agoda_.png" alt="Agoda Logo" />
+        </a>
+      </div>
+      <!-- 검색창 -->
+      <div class="sticky-search">
+        <input type="text" placeholder="여행지 검색" />
+        <input type="date" />
+        <input type="date" />
+        <button>검색</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar">
+        <div class="filter-sidebar">
+          <div class="map-container">
+            <img src="images/search/map.jpeg" alt="지도 이미지" class="map-image" />
+            <button class="map-view-btn">지도 보기</button>
+          </div>
+          <hr />
+          <!-- 필터 -->
+          <div class="filter-section">
+            <h3>필터</h3>
+            <div class="filter-item">
+              <input type="checkbox" id="exclude-sold-out" />
+              <label for="exclude-sold-out">매진 숙소 제외</label>
+            </div>
+          </div>
+          <hr />
+          <!-- 숙소유형 -->
+          <div class="filter-section">
+            <h3>숙소유형</h3>
+            <div class="filter-item">
+              <input type="radio" id="type-all" name="accommodation-type" checked />
+              <label for="type-all">전체</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-motel" name="accommodation-type" />
+              <label for="type-motel">모텔</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-hotel" name="accommodation-type" />
+              <label for="type-hotel">호텔·리조트</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-pension" name="accommodation-type" />
+              <label for="type-pension">펜션</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-villa" name="accommodation-type" />
+              <label for="type-villa">홈&빌라</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-camping" name="accommodation-type" />
+              <label for="type-camping">캠핑</label>
+            </div>
+            <div class="filter-item">
+              <input type="radio" id="type-hanok" name="accommodation-type" />
+              <label for="type-hanok">게하·한옥</label>
+            </div>
+          </div>
+          <hr />
+          <!-- 가격 -->
+          <div class="filter-section">
+            <h3>가격</h3>
+            <input type="range" min="0" max="500000" step="1000" />
+            <div class="price-range">
+              <span>0원</span>
+            </div>
+          </div>
+
+          <hr />
+          <!-- 취향 -->
+          <div class="filter-section">
+            <h3>#취향</h3>
+            <div class="tags">
+              <button># 가족여행숙소</button>
+              <button># 스파</button>
+              <button># 파티룸</button>
+              <button># OTT</button>
+              <button># 연인추천</button>
+              <button># 감성숙소</button>
+              <button># 뷰맛집</button>
+              <button># 리뷰좋은</button>
+              <button class="more-link">더 보기</button>
+            </div>
+          </div>
+          <hr />
+          <!-- 할인혜택 -->
+          <div class="filter-section">
+            <h3>할인혜택</h3>
+            <button class="tag">쿠폰할인</button>
+            <button class="tag">무한대실</button>
+            <button class="tag">할인특가</button>
+          </div>
+          <hr />
+          <!-- 예약유형 -->
+          <div class="filter-section">
+            <h3>예약유형</h3>
+            <div class="filter-item">
+              <input type="checkbox" id="type-hourly" />
+              <label for="type-hourly">대실예약</label>
+            </div>
+          </div>
+          <hr />
+          <!-- 등급 -->
+          <div class="filter-section">
+            <h3>등급</h3>
+            <button class="tag">5성급</button>
+            <button class="tag">4성급</button>
+            <button class="tag">블랙</button>
+            <button class="tag">펜트하우스</button>
+          </div>
+          <hr />
+          <!-- 시설 -->
+          <div class="filter-section">
+            <h3>시설</h3>
+
+            <!-- 공용시설 -->
+            <div class="sub-filter-section">
+              <h4>공용시설</h4>
+              <div class="tags">
+                <button>사우나</button>
+                <button>수영장</button>
+                <button>바베큐</button>
+                <button>레스토랑</button>
+                <button>피트니스</button>
+                <button>물놀이시설</button>
+                <button>공용샤워실</button>
+                <button>공용화장실</button>
+                <button>매점</button>
+              </div>
+              <button class="more-link">더 보기</button>
+            </div>
+            <hr />
+
+            <!-- 객실 내 시설 -->
+            <div class="sub-filter-section">
+              <h4>객실 내 시설</h4>
+              <div class="tags">
+                <button>스파/월풀</button>
+                <button>객실스파</button>
+                <button>미니바</button>
+                <button>무선인터넷</button>
+                <button>에어컨</button>
+                <button>욕실용품</button>
+                <button>샤워실</button>
+                <button>개인콘센트</button>
+              </div>
+            </div>
+
+            <hr />
+
+            <!-- 기타시설 -->
+            <div class="sub-filter-section">
+              <h4>기타시설</h4>
+              <div class="tags">
+                <button>조식제공</button>
+                <button>무료주차</button>
+                <button>반려견동반</button>
+                <button>사우나/찜질방</button>
+                <button>객실내취사</button>
+                <button>픽업서비스</button>
+                <button>캠프파이어</button>
+                <button>개인사물함</button>
+              </div>
+              <button class="more-link">더 보기</button>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="results">
+        <div class="results-header">
+          <h2>'부산' 검색 결과 1,037개</h2>
+          <div class="dropdown">
+            <button class="dropdown-btn">추천순 <span class="arrow">&#9662;</span></button>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item active">추천순</li>
+              <li class="dropdown-item">평점 높은순</li>
+              <li class="dropdown-item">리뷰 많은순</li>
+              <li class="dropdown-item">낮은 가격순</li>
+              <li class="dropdown-item">높은 가격순</li>
+              <li class="dropdown-item">거리순</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="detail_page.html" class="result-link">
+          <!-- 검색 결과 항목 0 -->
+          <div class="result-item">
+            <img src="images/search/hotels_0.jpg" alt="Hotel Image" />
+            <div class="details">
+              <h4>4성급·호텔</h4>
+              <h3>어반스테이 부산송도해변</h3>
+              <p>서구 - 부산송도해수욕장 도보 6분</p>
+              <span>⭐ 8.4 | 1,307명 평가</span>
+            </div>
+            <div class="price-section">
+              <div class="original-price">1,200,000원</div>
+              <div class="discounted-price">쿠폰 적용 시 130,410원</div>
+              <div class="note">이 가격으로 남은 객실 2개</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- 검색 결과 항목 1 -->
+        <div class="result-item">
+          <img src="images/search/hotels_1.jpg" alt="Hotel Image" />
+          <div class="details">
+            <h4>3성급·호텔</h4>
+            <h3>호텔 센트럴베이 광안리</h3>
+            <p>수영구 - 광안리해수욕장 도보 1분</p>
+            <span>⭐ 9.4 | 1,452명 평가</span>
+          </div>
+          <div class="price-section">
+            <div class="original-price">796,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 285,000원</div>
+            <div class="note">이 가격으로 남은 객실 2개</div>
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 2 -->
+        <div class="result-item">
+          <img src="images/search/hotels_2.jpg" alt="서면 비즈니스 호텔 J7" />
+          <div class="details">
+            <h4>모텔</h4>
+            <h3>서면 비즈니스 호텔 J7</h3>
+            <p>서면역 도보 8분</p>
+            <span>⭐ 9.3 | 2,187명 평가</span>
+            <p class="additional-info">대실 5시간</p>
+            <p class="additional-info">숙박: 15:00 체크인</p>
+            <p class="tags">넷플릭스, 디즈니+, 애플TV 제공, 화장품 무료사용</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 30,500원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 3 -->
+        <div class="result-item">
+          <img src="images/search/hotels_3.jpg" alt="엘모먼트 송도" />
+          <div class="details">
+            <h4>레지던스·호텔</h4>
+            <h3>엘모먼트 송도</h3>
+            <p>서구 - 부산송도해수욕장 도보 7분</p>
+            <span>⭐ 9.5 | 134명 평가</span>
+            <p class="tags">반짝특가</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 135,000원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 4 -->
+        <div class="result-item">
+          <img src="images/search/hotels_4.jpg" alt="신라스테이 해운대" />
+          <div class="details">
+            <h4>4성급·호텔</h4>
+            <h3>신라스테이 해운대</h3>
+            <p>해운대구 - 해운대해수욕장 도보 2분</p>
+            <span>⭐ 9.3 | 1,867명 평가</span>
+          </div>
+          <div class="price-section">
+            <div class="original-price">400,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 184,000원</div>
+            <div class="note">이 가격으로 남은 객실 2개</div>
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 1 -->
+        <div class="result-item">
+          <img src="images/search/hotels_1.jpg" alt="Hotel Image" />
+          <div class="details">
+            <h4>3성급·호텔</h4>
+            <h3>호텔 센트럴베이 광안리</h3>
+            <p>수영구 - 광안리해수욕장 도보 1분</p>
+            <span>⭐ 9.4 | 1,452명 평가</span>
+          </div>
+          <div class="price-section">
+            <div class="original-price">1,200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 285,000원</div>
+            <div class="note">이 가격으로 남은 객실 2개</div>
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 2 -->
+        <div class="result-item">
+          <img src="images/search/hotels_2.jpg" alt="서면 비즈니스 호텔 J7" />
+          <div class="details">
+            <h4>모텔</h4>
+            <h3>서면 비즈니스 호텔 J7</h3>
+            <p>서면역 도보 8분</p>
+            <span>⭐ 9.3 | 2,187명 평가</span>
+            <p class="additional-info">대실 5시간</p>
+            <p class="additional-info">숙박: 15:00 체크인</p>
+            <p class="tags">넷플릭스, 디즈니+, 애플TV 제공, 화장품 무료사용</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 30,500원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 3 -->
+        <div class="result-item">
+          <img src="images/search/hotels_3.jpg" alt="엘모먼트 송도" />
+          <div class="details">
+            <h4>레지던스·호텔</h4>
+            <h3>엘모먼트 송도</h3>
+            <p>서구 - 부산송도해수욕장 도보 7분</p>
+            <span>⭐ 9.5 | 134명 평가</span>
+            <p class="tags">반짝특가</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 135,000원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 1 -->
+        <div class="result-item">
+          <img src="images/search/hotels_1.jpg" alt="Hotel Image" />
+          <div class="details">
+            <h4>3성급·호텔</h4>
+            <h3>호텔 센트럴베이 광안리</h3>
+            <p>수영구 - 광안리해수욕장 도보 1분</p>
+            <span>⭐ 9.4 | 1,452명 평가</span>
+          </div>
+          <div class="price-section">
+            <div class="original-price">1,200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 285,000원</div>
+            <div class="note">이 가격으로 남은 객실 2개</div>
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 2 -->
+        <div class="result-item">
+          <img src="images/search/hotels_2.jpg" alt="서면 비즈니스 호텔 J7" />
+          <div class="details">
+            <h4>모텔</h4>
+            <h3>서면 비즈니스 호텔 J7</h3>
+            <p>서면역 도보 8분</p>
+            <span>⭐ 9.3 | 2,187명 평가</span>
+            <p class="additional-info">대실 5시간</p>
+            <p class="additional-info">숙박: 15:00 체크인</p>
+            <p class="tags">넷플릭스, 디즈니+, 애플TV 제공, 화장품 무료사용</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 30,500원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+
+        <!-- 검색 결과 항목 3 -->
+        <div class="result-item">
+          <img src="images/search/hotels_3.jpg" alt="엘모먼트 송도" />
+          <div class="details">
+            <h4>레지던스·호텔</h4>
+            <h3>엘모먼트 송도</h3>
+            <p>서구 - 부산송도해수욕장 도보 7분</p>
+            <span>⭐ 9.5 | 134명 평가</span>
+            <p class="tags">반짝특가</p>
+          </div>
+          <div class="price-section">
+            <div class="original-price">200,000원</div>
+            <div class="discounted-price">쿠폰 적용 시 135,000원</div>
+            <div class="note">이 가격으로 남은 객실 1개</div>
+            <!-- <a href="#" class="date-check">다른 날짜 확인</a> -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>도움말·문의</h4>
+          <ul>
+            <li><a href="#">도움말 센터</a></li>
+            <li><a href="#">자주 묻는 질문 (FAQ)</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">쿠키 정책</a></li>
+            <li><a href="#">이용 약관</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>회사명</h4>
+          <ul>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">프레스센터 / 보도자료</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>여행지</h4>
+          <ul>
+            <li><a href="#">국가별</a></li>
+            <li><a href="#">모든 항공편 노선</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>파트너</h4>
+          <ul>
+            <li><a href="#">YCS 파트너 포털</a></li>
+            <li><a href="#">Partner Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>모바일 아고다</h4>
+          <ul>
+            <li><a href="#">iOS</a></li>
+            <li><a href="#">Android</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>
+        All material herein © 2005 – 2024 Agoda Company Pte. Ltd., All Rights Reserved.<br />
+        아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의
+        일부입니다.
+      </p>
+      <div class="footer-logo-container">
+        <img src="images/logo/logo_agoda_.png" alt="Agoda Logo" />
+        <img src="images/logo/priceline-logo-white2.svg" alt="Priceline Logo" />
+        <img src="images/logo/kayak-logo-white2.svg" alt="Kayak Logo" />
+        <img src="images/logo/Booking_Com_Logotype_Aug2020_White.svg" alt="Booking.com Logo" />
+        <img src="images/logo/open-table-logo-white2.svg" alt="OpenTable Logo" />
+      </div>
+    </div>
+
+    <script src="search.js"></script>
+  </body>
+</html>

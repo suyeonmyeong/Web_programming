@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800&display=swap");
+
+@font-face {
+  font-family: "Pretendard-Light";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+    format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff")
+    format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-width: fit-content;
+  background-size: 100% 100%; /* 이미지가 깨지지 않도록 크기 조정 */
+  background-position: left; /* 배경 이미지를 화면 중앙에 정렬 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+  color: #ffffff; /* 기본 글자 색을 흰색으로 변경 */
+  background-attachment: fixed; /* 배경이 스크롤되더라도 고정 */
+}
+
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; /* 화면 너비를 꽉 채움 */
+  min-height: 100%; /* 화면 높이를 꽉 채움 */
+  z-index: -1; /* 비디오를 뒤로 보내기 */
+}
+
+.mainbox {
+  width: 825px; /* 확대 (750px -> 825px) */
+  padding: 49.5px; /* 확대 (45px -> 49.5px) */
+  border-radius: 20px;
+  margin: 33px; /* 확대 (30px -> 33px) */
+  margin-top: 99px; /* 확대 (90px -> 99px) */
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #111015; /* 사각형 안쪽 배경을 검정색으로 설정 */
+  border: 1px solid #ffffff; /* 테두리 흰색으로 변경 */
+  box-shadow: 0 1px 20px 0 #ffffff33; /* 흰색 그림자 */
+}
+
+.profile {
+  height: 286px; /* 확대 (260px -> 286px) */
+}
+
+section {
+  margin-bottom: 33px; /* 확대 (30px -> 33px) */
+}
+
+header {
+  background-color: rgba(17, 16, 21, 0.8); /* 헤더 배경색을 어둡게 */
+  padding: 0 66px; /* 확대 (60px -> 66px) */
+  font-family: "Schoolbell", cursive;
+  width: 100%;
+  height: 77px; /* 확대 (70px -> 77px) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+.logo {
+  font-size: 33px; /* 확대 (30px -> 33px) */
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #ffffff; /* 로고 텍스트 흰색으로 변경 */
+  text-shadow: 0 0 0.06em, 0 0 0.18em;
+}
+
+nav {
+  width: 440px; /* 확대 (400px -> 440px) */
+  transform: translateX(-126.5px); /* 확대 */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px; /* 확대 (20px -> 22px) */
+  letter-spacing: 0.1em;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* 네비게이션 링크 흰색 */
+  padding: 0 5.5px; /* 확대 (5px -> 5.5px) */
+}
+
+nav ul li a:hover {
+  font-weight: 800;
+  color: #0d89d1;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 33px; /* 확대 (30px -> 33px) */
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 8.8px; /* 확대 (8px -> 8.8px) */
+  color: #0d89d1; /* 제목 색상 */
+}
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 22px; /* 확대 (20px -> 22px) */
+  color: #0d89d1; /* 제목 색상 */
+  font-weight: 400;
+  margin-bottom: 17.6px; /* 확대 (16px -> 17.6px) */
+  border-bottom: 1px solid #3d3c3c;
+  padding-bottom: 5.5px; /* 확대 (5px -> 5.5px) */
+}
+
+.duck {
+  width: 220px; /* 확대 (200px -> 220px) */
+  height: 220px; /* 확대 (200px -> 220px) */
+  border-radius: 20%;
+  float: left;
+}
+
+.intro {
+  border-left: 2px solid gray;
+  display: inline-block;
+  margin-top: 16.5px; /* 확대 (15px -> 16.5px) */
+  margin-left: 33px; /* 확대 (30px -> 33px) */
+  padding-left: 33px; /* 확대 (30px -> 33px) */
+  height: 187px; /* 확대 (170px -> 187px) */
+}
+
+.mail {
+  text-decoration: none;
+  color: gray;
+}
+
+.title {
+  font-size: 16.5px; /* 확대 (15px -> 16.5px) */
+  color: #c7c7c7; /* 타이틀 색을 더 밝게 */
+  font-weight: bold;
+  line-height: 13.2px; /* 확대 (12px -> 13.2px) */
+}
+
+.title_text {
+  font-size: 16.5px; /* 확대 (15px -> 16.5px) */
+  color: #dddddd; /* 설명 텍스트도 밝은 회색 */
+  margin-bottom: 8.8px; /* 확대 (8px -> 8.8px) */
+  font-family: "Pretendard-Regular";
+}
+
+.sns {
+  text-align: center; /* 전체 중앙 정렬 */
+  margin-top: 22px; /* 확대 (20px -> 22px) */
+}
+
+.sns a {
+  display: inline-block;
+  margin: 0 16.5px; /* 확대 (15px -> 16.5px) */
+}
+
+.sns-img {
+  width: 44px; /* 확대 (40px -> 44px) */
+  height: 44px; /* 확대 (40px -> 44px) */
+  transition: transform 0.3s ease;
+}
+
+.sns-img:hover {
+  transform: scale(1.1); /* 마우스를 올렸을 때 아이콘 확대 효과 */
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 22px; /* 확대 (20px -> 22px) */
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 363px; /* 확대 (330px -> 363px) */
+  margin-top: 11px; /* 확대 (10px -> 11px) */
+}
+
+.project-image {
+  width: 352px; /* 확대 (320px -> 352px) */
+  height: 209px; /* 확대 (190px -> 209px) */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* 이미지 그림자 */
+}
+
+.project-info {
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 19.8px; /* 확대 (18px -> 19.8px) */
+  font-weight: bold;
+  margin-bottom: 11px; /* 확대 (10px -> 11px) */
+}
+
+.project-info p {
+  font-size: 15.4px; /* 확대 (14px -> 15.4px) */
+  margin-bottom: 11px; /* 확대 (10px -> 11px) */
+  color: #ffffff; /* 프로젝트 설명 흰색 */
+}
+
+.project-info a {
+  font-size: 15.4px; /* 확대 (14px -> 15.4px) */
+  color: #0d89d1;
+  text-decoration: none;
+}
+
+.project-info a:hover {
+  text-decoration: underline;
+}
+
+.see-more {
+  text-align: right; /* 오른쪽 정렬 */
+  margin-top: 20px; /* 상단 여백 */
+}
+
+.see-more a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: #4698c8; /* 링크 색상 */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.see-more a:hover {
+  text-decoration: none; /* 호버 시 밑줄 표시 */
+  color: #0d89d1; /* 호버 시 색상 변경 */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* 여러 줄로 배치되도록 설정 */
+  margin-top: 22px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px; /* 각 스킬 항목의 너비를 고정 */
+  margin: 11px;
+}
+
+.skill-icon {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 11px;
+  border-radius: 10%;
+}
+
+.skill-item p {
+  font-size: 15.4px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.float-wrap {
+  overflow: hidden;
+  margin-bottom: 4.4px; /* 확대 (4px -> 4.4px) */
+}
+
+.text {
+  line-height: 17.6px; /* 확대 (16px -> 17.6px) */
+  font-size: 14.3px; /* 확대 (13px -> 14.3px) */
+  font-weight: bold;
+  color: #ffffff; /* 설명 텍스트 흰색 */
+  margin-bottom: 6.6px; /* 확대 (6px -> 6.6px) */
+}
+
+.subtext {
+  font-size: 14.3px; /* 확대 (13px -> 14.3px) */
+  color: #dddddd; /* 서브텍스트 흰색 */
+  padding-left: 17.6px; /* 확대 (16px -> 17.6px) */
+  margin-bottom: 8.8px; /* 확대 (8px -> 8.8px) */
+}
+
+.righttext {
+  font-size: 12.1px; /* 확대 (11px -> 12.1px) */
+  font-weight: 300;
+  color: #a9a9a9; /* 부가 텍스트 연한 회색 */
+  float: right;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #1a1a1a; /* 푸터 배경을 짙은 회색 */
+  height: 220px; /* 확대 (200px -> 220px) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li p,
+footer ul li a {
+  margin-bottom: 5.5px; /* 확대 (5px -> 5.5px) */
+  font-size: 14.3px; /* 확대 (13px -> 14.3px) */
+  color: #ffffff; /* 푸터 텍스트 흰색 */
+}

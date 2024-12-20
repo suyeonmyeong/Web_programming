@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- for문으로 글씨 크기 다르게 출력하기 -->
+    <h3>for 문으로 10px~35px 크기 출력</h3>
+    <hr />
+    <script>
+      for (let size = 10; size <= 35; size += 5) {
+        // 5씩 증가
+        document.write("<span ");
+        document.write("style='font-size:" + size + "px'>");
+        document.write(size + "px");
+        document.write("</span>");
+      }
+    </script>
+    <br /><br />
+    <!-- while문 이용하여 0 ~ N까지의 합 구하기 -->
+    <h3>while문으로 0에서 n까지의 합</h3>
+    <hr />
+    <script>
+      let n = prompt("0보다 큰 정수를 입력하세요", 0);
+      n = parseInt(n); // 문자열 n을 숫자로 바꿈
+      let i = 0,
+        sum = 0;
+      while (i <= n) {
+        // i가 0에서 n까지 반복
+        sum += i;
+        i++;
+      }
+      document.write("0에서 " + n + "까지 합은 " + sum);
+    </script>
+  </body>
+</html>

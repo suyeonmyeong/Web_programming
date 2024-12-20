@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>변수 선언, 지역/전역/블록 변수</h3>
+    <hr />
+    <script>
+      let x;
+      function f() {
+        let y;
+        x = 10;
+        y = 20;
+        z = 30;
+        if (y == 20) {
+          let b = 40;
+          b++;
+          document.write("if 블록 내 블록변수 b = " + b + "<br>");
+        }
+        document.write("함수 f( )내 지역변수 y=" + y + "<br>");
+      }
+      f();
+      document.write("전역변수 x =" + x + "<br>");
+      document.write("전역변수 z =" + z);
+    </script>
+  </body>
+</html>

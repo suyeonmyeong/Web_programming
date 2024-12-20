@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDINGG'S Projects</title>
+    <link rel="icon" type="images/png" href="images/bebe_duck.jpg" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .subtitle {
+        font-size: 26px;
+      }
+
+      table {
+        width: 60%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 18px;
+        text-align: left;
+        border: 2px solid #0d89d1;
+        margin-bottom: 40px;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        border: 1px solid #0d89d1;
+      }
+
+      th {
+        background-color: #2f89bd;
+        color: #ffffff;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        width: 50%;
+      }
+
+      /* 프로젝트 섹션 스타일 */
+      .project {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px; /* 프로젝트 사이에 여백 추가 */
+        padding: 10px;
+      }
+      .project_title {
+        font-family: "Pretendard-SemiBold";
+        font-size: 24px;
+        color: #0d89d1;
+      }
+
+      .project img {
+        width: 40%; /* 이미지 너비 설정 */
+        height: auto;
+        margin-right: 20px; /* 이미지와 텍스트 사이에 간격 추가 */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-info {
+        flex: 1;
+        max-width: 60%; /* 텍스트가 이미지 옆으로 나란히 나오도록 설정 */
+        text-align: left; /* 텍스트를 왼쪽 정렬 */
+      }
+
+      .project p,
+      .project ul {
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 1.6;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo">DDINGG</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="AboutMe.html">About Me</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+    </header>
+    <video autoplay muted loop id="background-video">
+      <source src="images/SKY_Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="mainbox">
+      <section>
+        <h2 class="subtitle">My Awards</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>날짜</th>
+              <th>이름</th>
+              <th>상</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2024.05</td>
+              <td>생성형 AI 경진대회</td>
+              <td>우수상</td>
+            </tr>
+            <tr>
+              <td>2023.11</td>
+              <td>바이오헬스 AI 경진대회</td>
+              <td>장려상</td>
+            </tr>
+            <tr>
+              <td>2023.09</td>
+              <td>AWS,KT AICE와 함께하는 빅데이터, AI 경진대회</td>
+              <td>Top3</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="projects">
+        <h2 class="subtitle">My Projects</h2>
+        <!-- 프로젝트 1 -->
+        <article class="project">
+          <img src="images/AIX_중간.png" alt="AI+X 중간 프로젝트 이미지" />
+          <div class="project-info">
+            <div class="project_title">AI+X 중간 프로젝트: 데이터 분석</div>
+            <p>
+              이 프로젝트에서는 데이터 분석을 통해 특정 문제를 해결하는 것이 목표였습니다. 주로
+              사용한 기술은 Python package 중 하나인 pandas를 이용하여 Dataframe을 활용한 데이터
+              전처리 및 시각화, 다양한 알고리즘을 이용한 분석이었습니다.
+            </p>
+            <ul>
+              <li>사용한 기술: Python, Pandas, Seaborn</li>
+              <li>주요 성과: Dataframe 숙련도 상승</li>
+            </ul>
+            <a href="Pdf/AI+X_D조_최종.pdf" target="_blank">PDF 보기 &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 프로젝트 2 -->
+        <article class="project">
+          <img src="images/AIX_기말.png" alt="AI+X 기말 프로젝트 이미지" />
+          <div class="project-info">
+            <div class="project_title">AI+X 기말 프로젝트: 도그니 케어</div>
+            <p>
+              도그니 케어는 반려견의 슬개골 탈구를 조기 발견하는 서비스 기획 프로젝트였습니다. 센서
+              데이터 셋을 이용한 EDA부터, 아이디어 기획, 관련 논문 분석, 그리고 아이디어 구체화까지
+              하였습니다.
+            </p>
+            <ul>
+              <li>사용한 기술: Python, Pandas, Scikit-learn</li>
+              <li>주요 성과: 서비스 기획 경험, EDA 경험</li>
+            </ul>
+            <a href="Pdf/AI_X_기말프로젝트_최종본.pdf" target="_blank">PDF 보기 &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 프로젝트 3 -->
+        <article class="project">
+          <img src="images/바이오헬스_치의학.png" alt="바이오헬스 치의학 경진대회 이미지" />
+          <div class="project-info">
+            <div class="project_title">바이오헬스 치의학 경진대회</div>
+
+            <p>
+              바이오헬스 치의학 경진대회는 이미지 처리를 이용하여 사랑니 발치 수술 위험도 측정을
+              예측하는 경진대회였습니다. 이미지 전처리 및 증강 후에, DensNet121 딥러닝 모델을
+              사용하여 전이 학습과 여러 하이퍼 파라미터 튜닝을 통하여 성능을 높여 f1 score가 가장
+              높게 나오는 팀이 우승하는 대회였습니다.
+            </p>
+            <ul>
+              <li>사용한 기술: Scikit-learn, ResNET,DensNet121</li>
+              <li>주요 성과: 장려상, f1 score 0.7738</li>
+            </ul>
+            <a href="Pdf/바이오헬스_AI_경진대회.pdf" target="_blank">PDF 보기 &rarr;</a>
+          </div>
+        </article>
+
+        <!-- 프로젝트 4 -->
+        <article class="project">
+          <img src="images/생성형_공모전.png" alt="생성형 AI 공모전 이미지" />
+          <div class="project-info">
+            <div class="project_title">생성형 AI 공모전: 아바타 생성 시스템</div>
+            <p>
+              이 프로젝트는 실종경보문자에는 실종자의 프라이버시를 보장하지 못한다는 점에 주목하여,
+              실종자의 특징만 뽑아 프라이버시를 보장하면서도, 식별이 가능한 아바타 생성 서비스를
+              제안함
+            </p>
+            <ul>
+              <li>사용한 기술: DALLE-3, GPT-4, Multi2vec</li>
+              <li>주요 성과: 우수상</li>
+            </ul>
+            <a href="Pdf/생성형-공모전.pdf" target="_blank">PDF 보기 &rarr;</a>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <footer>
+      <ul>
+        <li><p>copyright ⓒ 2024 All rights reserved by suyeon.</p></li>
+        <li>
+          <a href="mailto:suyeon8235@gmail.com" target="_top">📧 Mail me : suyeon8235@gmail.com</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

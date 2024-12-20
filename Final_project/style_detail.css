@@ -1,0 +1,734 @@
+/* Reset */
+body,
+h1,
+p,
+a,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* 네비게이션 높이만큼 페이지 전체에 여백 추가 */
+body {
+  padding-top: 100px; /* 네비게이션과 겹치지 않도록 */
+}
+
+/* 로고 */
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.sticky-navbar .logo img {
+  height: 55px;
+}
+
+.sticky-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sticky-search input,
+.sticky-search button {
+  height: 50px;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sticky-search input {
+  width: 180px;
+}
+
+.sticky-search button {
+  background-color: #cd6688;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.sticky-search button:hover {
+  background-color: #b05570;
+}
+
+/* 스크롤 네비게이션 */
+.scroll-nav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px 0;
+  padding-top: 25px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-nav.visible {
+  transform: translateY(0);
+}
+
+.scroll-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Nav Tabs 스타일 */
+.nav-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-tabs span {
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  padding: 5px 10px;
+}
+
+.nav-tabs span.active {
+  color: #cd6688;
+  font-weight: bold;
+  border-bottom: 2px solid #cd6688;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.price-section .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.price-section .view-room-btn {
+  background-color: #ffffff;
+  color: #cd6688;
+  border: 2px solid #cd6688;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.price-section .view-room-btn:hover {
+  background-color: #b05570;
+}
+
+/* 이미지 레이아웃 */
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image-gallery .large-image {
+  height: 450px;
+  object-fit: cover;
+  grid-row: span 2;
+}
+
+.image-gallery .small-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.image-gallery .small-images img {
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.image-gallery .overlay {
+  position: relative;
+}
+
+.image-gallery .overlay img {
+  display: block;
+  border-radius: 10px;
+}
+
+.image-gallery .overlay span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Hotel Overview */
+.hotel-overview {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hotel-category {
+  font-size: 14px;
+  color: #666;
+}
+
+.hotel-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #cd6688;
+}
+
+.hotel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* 박스 높이를 동일하게 설정 */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0; /* 테두리 및 그림자 제거 */
+  background-color: transparent; /* 배경 투명 */
+  border: none; /* 테두리 없음 */
+  box-shadow: none; /* 그림자 없음 */
+}
+
+.info-box {
+  flex: 1;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* 내용 정렬 */
+  justify-content: space-between; /* 상하 균등 정렬 */
+}
+
+.info-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-box h3 a {
+  color: #cd6688;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.rating {
+  font-size: 14px;
+}
+
+.rating .score {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.rating .star {
+  color: #f1c40f;
+  margin-right: 5px;
+}
+
+.review-count {
+  margin: 10px 0;
+  color: #666;
+}
+
+.review-summary {
+  color: #444;
+  line-height: 1.6;
+}
+
+.amenities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.amenities li {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-box p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.info-box p a {
+  color: #cd6688;
+  text-decoration: none;
+}
+
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개씩 정렬 */
+  gap: 10px; /* 아이템 간격 */
+  margin-top: 10px;
+}
+
+.facility {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 이미지와 텍스트 간격 */
+}
+
+.facility img {
+  width: 24px; /* 이미지 크기 */
+  height: 24px;
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.facility span {
+  font-size: 14px;
+  color: #333; /* 텍스트 색상 */
+}
+
+/* 객실 section */
+
+.room-card-section {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-heading {
+  margin-left: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-image {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.section-image img {
+  max-width: 93%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.room-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /* background-color: #f9f9f9; */
+}
+
+.room-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  position: relative; /* 버튼을 우측 하단에 고정하기 위해 position 추가 */
+}
+
+.room-image img {
+  width: 450px; /* 이미지 크기 조정 */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 30px;
+}
+
+.room-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.room-info-and-amenities {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.room-amenities {
+  flex: 1;
+  margin-top: 25px;
+}
+
+.room-amenities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-amenities li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.room-amenities li img {
+  width: 20px; /* 아이콘 크기를 줄임 */
+  height: 20px;
+  object-fit: contain;
+}
+
+.room-info {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 24px;
+  margin-right: 8px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discounted-price {
+  color: #d9534f;
+  margin-right: 8px;
+}
+.room-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.room-price {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: flex-end; /* 오른쪽 정렬 */
+  color: #d9534f; /* 가격 강조 */
+}
+
+.room-book-button {
+  margin-top: 13px;
+  align-self: flex-end; /* 오른쪽 정렬 */
+  background-color: #cd6688;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.room-book-button:hover {
+  background-color: #b05570;
+}
+
+/* Footer */
+.footer {
+  background-color: #f3f3f3; /* 배경 색 */
+  padding: 30px 20px; /* 여백 */
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto; /* 가운데 정렬 */
+  display: flex;
+  justify-content: space-between; /* 칼럼 간격 유지 */
+  flex-wrap: wrap; /* 반응형: 화면 크기에 따라 줄바꿈 */
+}
+
+.footer-column {
+  flex: 1 1 200px; /* 각 칼럼의 최소 너비 지정 */
+  margin: 10px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer-column ul {
+  list-style: none; /* 불릿 제거 */
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #cd6688; /* 호버 효과 */
+}
+
+.footer-bottom {
+  background-color: #222; /* 배경색 */
+  color: #ccc; /* 텍스트 색 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  padding: 50px 0; /* 위아래 여백 */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-logo-container {
+  margin-top: 10px; /* 텍스트와 로고 간격 */
+  display: flex;
+  justify-content: center; /* 로고들을 가운데 정렬 */
+  gap: 20px; /* 로고 사이 간격 */
+}
+
+.footer-logo-container img {
+  height: 30px; /* 로고 높이 */
+  object-fit: contain; /* 로고 비율 유지 */
+}
+
+/* 리뷰 버튼 */
+.review-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.review-button:hover {
+  background-color: #0056b3;
+}
+
+/* 모달 기본 스타일 */
+.modal {
+  display: none; /* 기본적으로 보이지 않음 */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 배경 어둡게 처리 */
+}
+
+/* 모달 콘텐츠 */
+.review-modal {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 5% auto;
+  height: 80vh; /* 높이를 화면의 80%로 조정 */
+  max-height: 800px; /* 최대 높이 설정 */
+}
+
+/* 리뷰 헤더 영역 */
+.review-header {
+  flex: 0 0 35%; /* 리뷰 헤더가 전체 너비의 35%를 차지 */
+  padding: 20px;
+  background: #ffffff;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+.review-header-ex {
+  flex: 0 0 35%; /* 리뷰 헤더가 전체 너비의 35%를 차지 */
+  padding: 5px;
+  background: #ffffff;
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+}
+
+/* 리뷰 내용 영역 */
+.review-content {
+  flex: 1; /* 나머지 공간 차지 */
+  padding: 20px;
+  overflow-y: auto;
+}
+.review-header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.review-header p {
+  margin: 10px 0;
+}
+
+/* 평점 바 스타일 */
+.rating-bars {
+  margin-top: 10px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.rating-row span {
+  width: 20px; /* 평점 숫자 영역 크기 */
+  font-size: 14px;
+  text-align: center;
+}
+
+.rating-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.filled-bar {
+  height: 100%;
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.rating-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.rating-category img {
+  width: 24px; /* 아이콘 크기 설정 */
+  height: 24px;
+  margin-right: 10px;
+}
+
+.reviews-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  padding: 7px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  /* margin-bottom: 10px; */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.review-rating {
+  font-size: 13px;
+}
+
+/* 닫기 버튼 */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}

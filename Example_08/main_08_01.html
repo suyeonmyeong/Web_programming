@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 방법 1 -->
+    <script src="example_08_02.js">
+      //   function over(obj) {
+      //     obj.src = "Images/strawberry.png";
+      //   }
+      //   function out(obj) {
+      //     obj.src = "Images/eggplant.png";
+      //   }
+    </script>
+  </head>
+  <body>
+    <!-- 방법 2 -->
+    <h3>마우스를 올려보세영1</h3>
+    <hr />
+    <img
+      src="Images/eggplant.png"
+      alt="가지"
+      onmouseover="this.src='Images/strawberry.png'"
+      onmouseout="this.src='Images/eggplant.png'" />
+
+    <!-- 방법 3 -->
+    <h3>마우스를 올려보세영2</h3>
+    <hr />
+    <img src="Images/eggplant.png" alt="가지" onmouseover="over(this)" onmouseout="out(this)" />
+  </body>
+</html>

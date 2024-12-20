@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details view</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style_detail.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="sticky-navbar" id="stickyNavbar">
+      <div class="logo">
+        <a href="main.html">
+          <img src="images/logo_agoda_.png" alt="Agoda Logo" />
+        </a>
+      </div>
+      <div class="sticky-search">
+        <input type="text" placeholder="여행지 검색" />
+        <input type="date" />
+        <input type="date" />
+        <button>검색</button>
+      </div>
+    </header>
+
+    <!-- Scroll Navigation -->
+    <div class="scroll-nav hidden" id="scrollNav">
+      <div class="scroll-container">
+        <div class="nav-tabs">
+          <span>개요</span>
+          <span>객실</span>
+          <span>편의 시설 / 서비스</span>
+          <span>위치</span>
+          <span>정책</span>
+        </div>
+        <div class="price-section">
+          <span class="price">178,000원~</span>
+          <button class="view-room-btn">객실보기</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-gallery">
+      <!-- 큰 이미지 -->
+      <img src="images/details/hotels_img1.jpg" alt="Large Hotel" class="large-image" />
+
+      <!-- 작은 이미지들 -->
+      <div class="small-images">
+        <img src="images/details/hotels_img2.jpg" alt="Room Image 1" />
+        <img src="images/details/hotels_img3.jpg" alt="Room Image 2" />
+        <img src="images/details/hotels_img4.jpg" alt="Room Image 3" />
+        <div class="overlay">
+          <img src="images/details/hotels_img5.jpg" alt="Bathroom" />
+          <span>+15</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel Overview -->
+    <section id="개요" class="hotel-overview">
+      <div class="hotel-header">
+        <div>
+          <p class="hotel-category">호텔 · 비즈니스</p>
+          <h1 class="hotel-name">어반스테이 부산송도해변</h1>
+        </div>
+        <div class="hotel-price">
+          <span>130,410원~</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="개요" class="hotel-info">
+      <div class="info-box">
+        <div class="rating">
+          <div class="score">
+            <span class="star">★</span>
+            <span>9.1</span>
+          </div>
+          <p class="review-count">399명 평가 <a href="#" id="openReviewModalLink">〉</a></p>
+          <p class="review-summary">
+            이번 부산 송도 여행 하면서 어반스테이를 처음 이용해봤는데 만족스러운 숙박이었습니다.
+            우선 위치가 진짜 최고였고...
+          </p>
+        </div>
+      </div>
+      <div class="info-box">
+        <h3>서비스 및 부대시설 <a href="#">〉</a></h3>
+        <div class="facilities">
+          <div class="facility">
+            <img src="images/icons/wifi.png" alt="무선인터넷" />
+            <span>무선인터넷</span>
+          </div>
+          <div class="facility">
+            <img src="images/icons/dispenser.png" alt="욕실용품" />
+            <span>욕실용품</span>
+          </div>
+          <div class="facility">
+            <img src="images/icons/no_smoke.png" alt="금연" />
+            <span>금연</span>
+          </div>
+          <div class="facility">
+            <img src="images/icons/TV.png" alt="TV" />
+            <span>TV</span>
+          </div>
+          <div class="facility">
+            <img src="images/icons/airconditioner.png" alt="에어컨" />
+            <span>에어컨</span>
+          </div>
+          <div class="facility">
+            <img src="images/icons/fridge.png" alt="냉장고" />
+            <span>냉장고</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>위치 정보 <a href="#">〉</a></h3>
+        <p>📍 부산 서구 암남동 234 <a href="#"> 지도보기</a></p>
+        <p>🚶 부산송도해수욕장 도보 1분</p>
+      </div>
+    </section>
+
+    <section id="객실" class="room-card-section">
+      <h2 class="section-heading">객실</h2>
+      <div class="section-image">
+        <img src="images/details/selector.png" alt="객실 이미지" />
+      </div>
+      <div class="room-card-container">
+        <div class="room-card">
+          <div class="room-image">
+            <img src="images/details/hotels_img2.jpg" alt="스튜디오 트윈" />
+          </div>
+          <div class="room-details">
+            <h2 class="room-title">스튜디오 트윈 (Studio Twin)</h2>
+            <div class="room-info-and-amenities">
+              <div class="room-amenities">
+                <ul>
+                  <li><img src="images/icons/bed.png" alt="싱글베드" /> 싱글베드 2개</li>
+                  <li><img src="images/icons/home.png" alt="객실 크기" /> 객실 크기: 22m²</li>
+                  <li><img src="images/icons/no_smoking_white.png" alt="금연" /> 금연</li>
+                  <li><img src="images/icons/shower.png" alt="샤워실" /> 샤워실</li>
+                </ul>
+              </div>
+              <div class="room-info">
+                <p>입실 16:00</p>
+                <p>퇴실 11:00</p>
+                <p>기준 2인 · 최대 2인</p>
+              </div>
+            </div>
+            <div class="room-price">
+              <span class="original-price">350,000원</span>
+              <span class="discounted-price">130,410원</span>
+            </div>
+            <button class="room-book-button">객실 예약</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card-container">
+        <div class="room-card">
+          <div class="room-image">
+            <img src="images/details/hotels_img3.jpg" alt="스튜디오 트윈" />
+          </div>
+          <div class="room-details">
+            <h2 class="room-title">스튜디오 (Studio))</h2>
+            <div class="room-info-and-amenities">
+              <div class="room-amenities">
+                <ul>
+                  <li><img src="images/icons/bed.png" alt="싱글베드" /> 퀸베드 1개</li>
+                  <li><img src="images/icons/home.png" alt="객실 크기" /> 객실 크기: 22m²</li>
+                  <li><img src="images/icons/no_smoking_white.png" alt="금연" /> 금연</li>
+                  <li><img src="images/icons/shower.png" alt="샤워실" /> 샤워실</li>
+                </ul>
+              </div>
+              <div class="room-info">
+                <p>입실 16:00</p>
+                <p>퇴실 11:00</p>
+                <p>기준 2인 · 최대 2인</p>
+              </div>
+            </div>
+            <div class="room-price">
+              <span class="original-price">350,000원</span>
+              <span class="discounted-price">130,410원</span>
+            </div>
+            <button class="room-book-button">객실 예약</button>
+          </div>
+        </div>
+      </div>
+      <div class="room-card-container">
+        <div class="room-card">
+          <div class="room-image">
+            <img src="images/details/hotels_img4.jpg" alt="스튜디오 트윈" />
+          </div>
+          <div class="room-details">
+            <h2 class="room-title">스튜디오 오션뷰 (Studio Ocean View)</h2>
+            <div class="room-info-and-amenities">
+              <div class="room-amenities">
+                <ul>
+                  <li><img src="images/icons/bed.png" alt="싱글베드" /> 퀸베드 1개</li>
+                  <li><img src="images/icons/home.png" alt="객실 크기" /> 객실 크기: 22m²</li>
+                  <li><img src="images/icons/no_smoking_white.png" alt="금연" /> 금연</li>
+                  <li><img src="images/icons/shower.png" alt="샤워실" /> 샤워실</li>
+                </ul>
+              </div>
+              <div class="room-info">
+                <p>입실 16:00</p>
+                <p>퇴실 11:00</p>
+                <p>기준 2인 · 최대 2인</p>
+              </div>
+            </div>
+            <div class="room-price">
+              <span class="original-price">420,000원</span>
+              <span class="discounted-price">270,580원</span>
+            </div>
+            <button class="room-book-button">객실 예약</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="편의 시설 / 서비스">
+      <h2>편의 시설 / 서비스</h2>
+      <p>여기에 서비스 및 부대시설 내용이 들어갑니다...</p>
+    </section>
+
+    <section id="위치">
+      <h2>위치</h2>
+      <p>여기에 위치 내용이 들어갑니다...</p>
+    </section>
+
+    <section id="정책">
+      <h2>정책</h2>
+      <p>여기에 리뷰 내용이 들어갑니다...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>도움말·문의</h4>
+          <ul>
+            <li><a href="#">도움말 센터</a></li>
+            <li><a href="#">자주 묻는 질문 (FAQ)</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">쿠키 정책</a></li>
+            <li><a href="#">이용 약관</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>회사명</h4>
+          <ul>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">프레스센터 / 보도자료</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>여행지</h4>
+          <ul>
+            <li><a href="#">국가별</a></li>
+            <li><a href="#">모든 항공편 노선</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>파트너</h4>
+          <ul>
+            <li><a href="#">YCS 파트너 포털</a></li>
+            <li><a href="#">Partner Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>모바일 아고다</h4>
+          <ul>
+            <li><a href="#">iOS</a></li>
+            <li><a href="#">Android</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>
+        All material herein © 2005 – 2024 Agoda Company Pte. Ltd., All Rights Reserved.<br />
+        아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의
+        일부입니다.
+      </p>
+      <div class="footer-logo-container">
+        <img src="images/logo/logo_agoda_.png" alt="Agoda Logo" />
+        <img src="images/logo/priceline-logo-white2.svg" alt="Priceline Logo" />
+        <img src="images/logo/kayak-logo-white2.svg" alt="Kayak Logo" />
+        <img src="images/logo/Booking_Com_Logotype_Aug2020_White.svg" alt="Booking.com Logo" />
+        <img src="images/logo/open-table-logo-white2.svg" alt="OpenTable Logo" />
+      </div>
+    </div>
+
+    <!-- 리뷰 보기 버튼 -->
+    <div id="reviewModal" class="modal">
+      <div class="review-modal">
+        <span class="close">&times;</span>
+        <div class="review-header">
+          <h1>★ 4.93</h1>
+          <p>게스트 선호</p>
+          <p>평점, 후기, 신뢰도 기준 아고다에서 가장 사랑받는 숙소</p>
+          <p>전체 평점</p>
+          <div class="rating-bars">
+            <div class="rating-row">
+              <span>5</span>
+              <div class="rating-bar">
+                <div class="filled-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="rating-row">
+              <span>4</span>
+              <div class="rating-bar">
+                <div class="filled-bar" style="width: 10%"></div>
+              </div>
+            </div>
+            <div class="rating-row">
+              <span>3</span>
+              <div class="rating-bar">
+                <div class="filled-bar" style="width: 5%"></div>
+              </div>
+            </div>
+            <div class="rating-row">
+              <span>2</span>
+              <div class="rating-bar">
+                <div class="filled-bar" style="width: 0%"></div>
+              </div>
+            </div>
+            <div class="rating-row">
+              <span>1</span>
+              <div class="rating-bar">
+                <div class="filled-bar" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 평가 항목들 -->
+          <div class="rating-category">
+            <img src="images/icons/senitizer.png" alt="청결도 아이콘" />
+            <p>청결도</p>
+            <span>4.9</span>
+          </div>
+          <div class="rating-category">
+            <img src="images/icons/check.png" alt="정확도 아이콘" />
+            <p>정확도</p>
+            <span>4.9</span>
+          </div>
+          <div class="rating-category">
+            <img src="images/icons/checkin.png" alt="체크인 아이콘" />
+            <p>체크인</p>
+            <span>4.9</span>
+          </div>
+          <div class="rating-category">
+            <img src="images/icons/speeck.png" alt="의사소통 아이콘" />
+            <p>의사소통</p>
+            <span>5.0</span>
+          </div>
+          <div class="rating-category">
+            <img src="images/icons/map.png" alt="위치 아이콘" />
+            <p>위치</p>
+            <span>5.0</span>
+          </div>
+          <div class="rating-category">
+            <img src="images/icons/price.png" alt="가격 대비 만족도 아이콘" />
+            <p>가격 대비 만족도</p>
+            <span>4.9</span>
+          </div>
+        </div>
+        <!-- 다른 평가 항목들 추가 -->
+
+        <div class="review-content">
+          <h2>후기 182개</h2>
+          <input type="text" placeholder="후기 검색" class="search-input" />
+          <div class="reviews-list">
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Dennea</strong>- 아일랜드</p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ☆ <span class="review-date">· 2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>
+                  방이 깨끗하고 정리되어 있었습니다. 하지만 배수/배관에서 나는 냄새가 스프레이로
+                  가려질 수 없습니다. 건물 전체 하수구에서 나온 것 같아요. 미니 바는 아주 좋은
+                  아이디어입니다. 숙소는 편안하고 기능적이며 쇼핑몰에 쉽게 접근할 수 있었습니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Precious</strong></p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ★ <span class="review-date">· 2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>
+                  쇼핑몰 바로 앞이라 위치가 좋습니다. 또한 위치가 도시에 있기 때문에 투어를 위해
+                  픽업하기에 좋은 장소입니다. 호스트도 신속하게 응답하고 친절합니다! 정말 즐거운
+                  시간을 보냈습니다. ❤️
+                </p>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Ynno</strong>- 아일랜드</p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ☆ <span class="review-date">· 2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>
+                  멋진 숙소와 매우 훌륭한 호스트. 가장 감사한 것은 체크아웃 후 지원과
+                  커뮤니케이션입니다. 회원님의 숙소에서 다시 머무르는 것을 기대합니다!
+                </p>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Ryan</strong></p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ☆ <span class="review-date">· 3주 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>놀라운 호스트와 쇼핑몰 근처의 완벽한 공간</p>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Dennea</strong>- 아일랜드</p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ☆ <span class="review-date">· 2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>
+                  방이 깨끗하고 정리되어 있었습니다. 하지만 배수/배관에서 나는 냄새가 스프레이로
+                  가려질 수 없습니다. 건물 전체 하수구에서 나온 것 같아요. 미니 바는 아주 좋은
+                  아이디어입니다. 숙소는 편안하고 기능적이며 쇼핑몰에 쉽게 접근할 수 있었습니다.
+                </p>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header-ex">
+                <div class="review-info">
+                  <p class="reviewer-name"><strong>Dennea</strong>- 아일랜드</p>
+                  <div class="review-rating">
+                    ★ ★ ★ ★ ☆ <span class="review-date">· 2일 전</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-body">
+                <p>
+                  방이 깨끗하고 정리되어 있었습니다. 하지만 배수/배관에서 나는 냄새가 스프레이로
+                  가려질 수 없습니다. 건물 전체 하수구에서 나온 것 같아요. 미니 바는 아주 좋은
+                  아이디어입니다. 숙소는 편안하고 기능적이며 쇼핑몰에 쉽게 접근할 수 있었습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="detail.js"></script>
+  </body>
+</html>

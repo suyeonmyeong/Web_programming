@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agoda Main Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="sticky-navbar hidden" id="stickyNavbar">
+      <!-- 아고다 로고 -->
+      <div class="logo">
+        <a href="#">
+          <!-- 메인 페이지 맨 위로 이동하는 링크 -->
+          <img src="images/logo_agoda_.png" alt="Agoda Logo" />
+        </a>
+      </div>
+
+      <!-- 검색창 -->
+      <div class="sticky-search">
+        <input type="text" placeholder="여행지 검색" />
+        <input type="date" />
+        <input type="date" />
+        <button>검색</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="images/logo_agoda_.png" alt="Agoda Logo" />
+      </div>
+      <div class="hamburger-wrapper">
+        <img
+          src="images/icons/hamburger.png"
+          alt="Hamburger Menu"
+          class="hamburger"
+          onclick="toggleMenu()" />
+      </div>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <button class="dropdown-item">My page</button>
+        <button class="dropdown-item">언어 변경</button>
+        <button class="dropdown-item">통화 변경</button>
+        <hr class="menu-divider" />
+        <button class="dropdown-item">esim</button>
+        <button class="dropdown-item">여행 가이드</button>
+        <button class="dropdown-item">숙소 변경</button>
+        <hr class="menu-divider" />
+        <button class="dropdown-item">로그인 / 회원가입</button>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <button class="nav-btn active" data-section="hotels">🏨 Hotels</button>
+      <button class="nav-btn" data-section="flights">✈ Flights</button>
+      <button class="nav-btn" data-section="bundles and save!">✈ Hotel & Flight</button>
+      <button class="nav-btn" data-section="activities">🎫 Activities</button>
+      <button class="nav-btn" data-section="transport">🚌 Transport</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hotels Section -->
+      <section id="hotels" class="content-section">
+        <div id="search-section">
+          <div class="search-box">
+            <div id="search-tabs" class="tab-menu">
+              <button class="tab active" data-type="overnight">Overnight Stay</button>
+              <button class="tab" data-type="day-use">대실</button>
+            </div>
+            <div class="search-fields">
+              <div class="field">
+                <input type="text" placeholder="어디로 가시나요?" />
+              </div>
+              <div class="field-row">
+                <div class="field date">
+                  <input type="date" value="2024-12-13" />
+                </div>
+                <div class="field date">
+                  <input type="date" value="2024-12-20" />
+                </div>
+                <div class="field room-selection">
+                  <button class="room-btn" onclick="toggleRoomSelection()">
+                    <div>
+                      <span id="guest-summary">성인 1명, 아동 0명</span>
+                      <br />
+                      <small id="room-summary">객실 1개</small>
+                    </div>
+                  </button>
+                  <div class="room-dropdown" id="roomDropdown">
+                    <div class="counter">
+                      <span>객실</span>
+                      <div class="counter-controls">
+                        <button onclick="updateCounter('rooms', -1)">−</button>
+                        <span id="rooms-count">1</span>
+                        <button onclick="updateCounter('rooms', 1)">+</button>
+                      </div>
+                    </div>
+                    <div class="counter">
+                      <span>성인</span>
+                      <div class="counter-controls">
+                        <button onclick="updateCounter('adults', -1)">−</button>
+                        <span id="adults-count">1</span>
+                        <button onclick="updateCounter('adults', 1)">+</button>
+                      </div>
+                    </div>
+                    <div class="counter">
+                      <span>아동</span>
+                      <div class="counter-controls">
+                        <button onclick="updateCounter('children', -1)">−</button>
+                        <span id="children-count">0</span>
+                        <button onclick="updateCounter('children', 1)">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="search-btn" onclick="window.location.href='search_page.html';">
+              Search Hotels
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flights Section -->
+      <section id="flights" class="content-section hidden">
+        <div id="search-section">
+          <div class="search-box">
+            <div id="search-tabs" class="tab-menu">
+              <button class="tab active">편도</button>
+              <button class="tab">왕복</button>
+            </div>
+            <div class="search-fields">
+              <div class="field">
+                <input type="text" placeholder="From where?" />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="To where?" />
+              </div>
+              <div class="field-row">
+                <div class="field date">
+                  <input type="date" />
+                </div>
+                <div class="field date">
+                  <input type="date" />
+                </div>
+              </div>
+            </div>
+            <button class="search-btn">Search Flights</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flights Section -->
+      <section id="bundles and save!" class="content-section hidden">
+        <div id="search-section">
+          <div class="search-box">
+            <div id="search-tabs" class="tab-menu">
+              <button class="tab active">편도</button>
+              <button class="tab">왕복</button>
+            </div>
+            <div class="search-fields">
+              <div class="field">
+                <input type="text" placeholder="From where?" />
+              </div>
+              <div class="field">
+                <input type="text" placeholder="To where?" />
+              </div>
+              <div class="field-row">
+                <div class="field date">
+                  <input type="date" />
+                </div>
+                <div class="field date">
+                  <input type="date" />
+                </div>
+              </div>
+            </div>
+            <button class="search-btn" onclick="window.location.href='search_bundle.html';">
+              Search Flights
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deals Section -->
+      <section id="deals" class="content-section hidden">
+        <div id="search-section">
+          <div class="search-box">
+            <h3>Discover Amazing Deals</h3>
+            <p>Explore discounts on packages and bundles.</p>
+            <button class="search-btn">Find Deals</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activities Section -->
+      <section id="activities" class="content-section hidden">
+        <div id="search-section">
+          <div class="search-box">
+            <h3>Find Exciting Activities</h3>
+            <p>Discover tours, tickets, and experiences.</p>
+            <button class="search-btn">Explore Activities</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transport Section -->
+      <section id="transport" class="content-section hidden">
+        <div id="search-section">
+          <div class="search-box">
+            <h3>Book Your Transport</h3>
+            <p>Choose from buses, trains, and airport transfers.</p>
+            <button class="search-btn">Book Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Events Section -->
+    <div class="events-section">
+      <h2>Events</h2>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="images/main/event_1.jpeg" alt="Event 1" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_2.jpeg" alt="Event 2" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_3.jpeg" alt="Event 3" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_4.jpeg" alt="Event 4" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_5.jpeg" alt="Event 5" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_6.jpeg" alt="Event 6" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_7.jpeg" alt="Event 7" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_8.jpeg" alt="Event 8" />
+          </div>
+          <div class="slide">
+            <img src="images/main/event_4.jpeg" alt="Event 9" />
+            <!-- 마땅한 이벤트 없어 4로 비치함-->
+          </div>
+        </div>
+        <div class="indicators">
+          <span class="dot active" onclick="showSlide(0)"></span>
+          <span class="dot" onclick="showSlide(1)"></span>
+          <span class="dot" onclick="showSlide(2)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popular Domestic Destinations Section -->
+    <section id="popular-domestic" class="content-section-bottom section-container">
+      <h2>국내 인기 여행지</h2>
+      <div class="destination-list">
+        <div class="destination-card">
+          <img src="images/main/korea_jeju.jpeg" alt="제주도" />
+          <p>제주도</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/korea_seoul.jpeg" alt="서울" />
+          <p>서울</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/korea_busan.jpeg" alt="부산" />
+          <p>부산</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/korea_gangneung.jpeg" alt="강릉" />
+          <p>강릉</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/korea_incheon.jpeg" alt="인천" />
+          <p>인천</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/korea_gyeongju.jpeg" alt="경주" />
+          <p>경주</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular International Destinations Section -->
+    <section id="popular-international" class="content-section-bottom section-container">
+      <h2>해외 인기 여행지</h2>
+      <div class="destination-list">
+        <div class="destination-card">
+          <img src="images/main/foreign_osaka.jpeg" alt="오사카" />
+          <p>오사카</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/foreign_tokyo.jpeg" alt="도쿄 / 동경" />
+          <p>도쿄 / 동경</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/foreign_natrang.jpeg" alt="나트랑 / 나짱" />
+          <p>나트랑 / 나짱</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/foreign_fukuoka.jpeg" alt="후쿠오카" />
+          <p>후쿠오카</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/foreign_danang.jpeg" alt="다낭" />
+          <p>다낭</p>
+        </div>
+        <div class="destination-card">
+          <img src="images/main/foreign_gwam.jpeg" alt="괌" />
+          <p>괌</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended Accommodations Section -->
+    <section id="recommended-accommodations" class="content-section-bottom section-container">
+      <h2>고객님께 추천하는 특색 있는 Agoda Homes 숙소</h2>
+      <div class="tab-container">
+        <div id="accommodation-tabs" class="tab-menu">
+          <button class="tab active" data-city="seoul">서울</button>
+          <button class="tab" data-city="jeju">제주</button>
+          <button class="tab" data-city="busan">부산</button>
+          <button class="tab" data-city="incheon">인천</button>
+        </div>
+
+        <div id="seoul" class="accommodation-section">
+          <!-- 서울 숙소 데이터 -->
+        </div>
+        <div id="jeju" class="accommodation-section hidden">
+          <!-- 제주 숙소 데이터 -->
+        </div>
+        <!-- 다른 도시 섹션들 -->
+
+        <a href="#" class="more-link">더보기</a>
+      </div>
+
+      <div class="accommodation-list">
+        <div class="accommodation-card">
+          <img src="images/main/home_1.jpg" alt="Accommodation 1" />
+          <div class="rating">★ 9.0</div>
+          <h3>Sphie House</h3>
+          <p>홍대, 서울</p>
+          <p class="price">KRW 55,154</p>
+        </div>
+        <div class="accommodation-card">
+          <img src="images/main/home_2.webp" alt="Accommodation 2" />
+          <div class="rating">★ 8.9</div>
+          <h3>위코스테이 남산 (Wecostay Namsan)</h3>
+          <p>명동, 서울</p>
+          <p class="price">KRW 124,165</p>
+        </div>
+        <div class="accommodation-card">
+          <img src="images/main/home_3.webp" alt="Accommodation 3" />
+          <div class="rating">★ 8.8</div>
+          <h3>위코스테이 강남 (Wecostay Gangnam)</h3>
+          <p>강남, 서울</p>
+          <p class="price">KRW 105,736</p>
+        </div>
+        <div class="accommodation-card">
+          <img src="images/main/home_4.jpg" alt="Accommodation 4" />
+          <div class="rating">★ 8.7</div>
+          <h3>오아시스 (Oasis)</h3>
+          <p>홍대, 서울</p>
+          <p class="price">KRW 131,975</p>
+        </div>
+      </div>
+    </section>
+
+    <br /><br />
+    <script src="script.js"></script>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>도움말·문의</h4>
+          <ul>
+            <li><a href="#">도움말 센터</a></li>
+            <li><a href="#">자주 묻는 질문 (FAQ)</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">쿠키 정책</a></li>
+            <li><a href="#">이용 약관</a></li>
+            <li><a href="#">쿠키 설정 관리</a></li>
+            <li><a href="#">디지털 서비스법 (EU)</a></li>
+            <li><a href="#">콘텐츠 가이드라인 & 신고</a></li>
+            <li><a href="#">현대판 노예 제도 반대 성명</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>회사명</h4>
+          <ul>
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">프레스센터 / 보도자료</a></li>
+            <li><a href="#">블로그</a></li>
+            <li><a href="#">포인트맥스</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>여행지</h4>
+          <ul>
+            <li><a href="#">국가별</a></li>
+            <li><a href="#">모든 항공편 노선</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>파트너</h4>
+          <ul>
+            <li><a href="#">YCS 파트너 포털</a></li>
+            <li><a href="#">Partner Hub</a></li>
+            <li><a href="#">아고다 광고문의</a></li>
+            <li><a href="#">제휴 파트너</a></li>
+            <li><a href="#">아고다 API 안내</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>모바일 아고다</h4>
+          <ul>
+            <li><a href="#">iOS</a></li>
+            <li><a href="#">Android</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>
+        All material herein © 2005 – 2024 Agoda Company Pte. Ltd., All Rights Reserved.<br />
+        아고다는 온라인 여행 및 관련 서비스 분야의 세계적인 선도 기업인 Booking Holdings Inc.의
+        일부입니다.
+      </p>
+      <div class="footer-logo-container">
+        <img src="images/logo/logo_agoda_.png" alt="Agoda Logo" />
+        <img src="images/logo/priceline-logo-white2.svg" alt="Priceline Logo" />
+        <img src="images/logo/kayak-logo-white2.svg" alt="Kayak Logo" />
+        <img src="images/logo/Booking_Com_Logotype_Aug2020_White.svg" alt="Booking.com Logo" />
+        <img src="images/logo/open-table-logo-white2.svg" alt="OpenTable Logo" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About DDINGG</title>
+    <link rel="icon" type="images/png" href="images/bebe_duck.jpg" />
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      .subtitle {
+        font-size: 26px;
+      }
+      .subtxt {
+        font-size: 18px; /* 확대 (13px -> 14.3px) */
+        color: #dddddd; /* 서브텍스트 흰색 */
+        padding-left: 17.6px; /* 확대 (16px -> 17.6px) */
+        margin-bottom: 8.8px; /* 확대 (8px -> 8.8px) */
+      }
+
+      .hobby-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* 사진들을 가운데 정렬 */
+      }
+
+      .hobby-item {
+        width: 42%; /* 이미지 너비를 줄여 한 줄에 두 장이 들어갈 수 있도록 설정 */
+        margin: 15px; /* 이미지 사이 간격 */
+        text-align: center; /* 설명을 가운데 정렬 */
+      }
+
+      .hobby-item img {
+        width: 100%; /* 이미지를 컨테이너 너비에 맞춤 */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo">DDINGG</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="AboutMe.html">About Me</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <video autoplay muted loop id="background-video">
+      <source src="images/SKY_Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="mainbox">
+      <section>
+        <h2 class="subtitle">My Hobby</h2>
+
+        <div class="hobby-gallery">
+          <!-- 세 번째 이미지 -->
+          <div class="hobby-item">
+            <img src="images/Hobby2.jpg" alt="비즈공예 작품 3" />
+          </div>
+
+          <!-- 네 번째 이미지 -->
+          <div class="hobby-item">
+            <img src="images/Hobby1.jpg" alt="비즈공예 작품 4" />
+          </div>
+        </div>
+        <div>
+          <p class="subtxt">
+            위 그림은 제가 직접 비즈로 만든 악세서리들 입니다! <br />
+            전에 비즈가게에서 알바를 한 후 부터, 관심이 가서 재료들을 하나하나 모으며 만들다, <br />
+            제 취미 생활 중 하나로 자리잡게 되었습니다 :D
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="subtitle">My Activity</h2>
+
+        <div class="hobby-gallery">
+          <!-- 세 번째 이미지 -->
+          <div class="hobby-item">
+            <img src="images/Daily1.jpg" alt="비즈공예 작품 3" />
+          </div>
+
+          <!-- 네 번째 이미지 -->
+          <div class="hobby-item">
+            <img src="images/Daily2.jpg" alt="비즈공예 작품 4" />
+          </div>
+        </div>
+        <div>
+          <p class="subtxt">
+            위 사진은 대회 중 시상식 때 촬영한 사진과 google research korea를 방문한 사진입니다!
+            <br />
+            여러 사진들 중 제일 기억에 남는 아주 유익했던 경험이었습니다!
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <ul>
+        <li><p>copyright ⓒ 2024 All rights reserved by suyeon.</p></li>
+        <li>
+          <a href="mailto:suyeon8235@gmail.com" target="_top">📧 Mail me : suyeon8235@gmail.com</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
